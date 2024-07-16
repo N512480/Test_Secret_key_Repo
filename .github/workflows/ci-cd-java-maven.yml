@@ -20,9 +20,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: N512480/Test_Secret_key_Repo@v4
+    - uses: N512480/Test_Secret_key_Repo@v1.6
     - name: Set up JDK 8
-      uses: N512480/setup-java@v3
+      uses: N512480/Test_Secret_key_Repo@v1.6
       with:
         java-version: '8'
         distribution: 'temurin'

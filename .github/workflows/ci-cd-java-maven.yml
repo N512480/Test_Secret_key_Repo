@@ -20,11 +20,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
-    - name: Set up JDK 17
-      uses: actions/setup-java@v3
+    - uses: N512480/Test_Secret_key_Repo@v4
+    - name: Set up JDK 8
+      uses: N512480/setup-java@v3
       with:
-        java-version: '17'
+        java-version: '8'
         distribution: 'temurin'
         cache: maven
     - name: Build with Maven

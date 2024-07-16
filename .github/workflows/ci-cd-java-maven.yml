@@ -19,5 +19,5 @@ jobs:
   JAVA:
     uses: Iberia-Ent/software-engineering--workflow-java-maven/.github/workflows/ci-cd-java-maven.yml@v1.6
     secrets:
-        AWS_DEPLOYMENT_ROLE: ${{ secrets.AWS_DEPLOYMENT_ROLE }}
-        AWS_CODEARTIFACT_ROLE: ${{ secrets.AWS_CODEARTIFACT_ROLE }}     
+        EMAIL_SECRET_PASSPHRASE: ${{ secrets.EMAIL_SECRET_PASSPHRASE }}
+ 

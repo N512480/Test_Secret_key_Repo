@@ -1,6 +1,6 @@
 package com;
 
-import com.sun.javaws.Main;
+
 import org.apache.log4j.Logger;
 import org.yaml.snakeyaml.Yaml;
 

@@ -15,9 +15,7 @@ on:
     branches: [ "develop" ]
 
 jobs:
-  uses: N512480/Test_Secret_key_Repo@/.github/workflows/ci-cd-java-maven.yml@v1.6
-  secrets:
-    EMAIL_SECRET_PASSPHRASE: ${{ secrets.EMAIL_SECRET_PASSPHRASE }}
+
   build:
 
     runs-on: ubuntu-latest

@@ -20,12 +20,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: N512480/Test_Secret_key_Repo
-    - name: Set up JDK 8
       uses: N512480/Test_Secret_key_Repo
+    - name: Set up JDK 8
       with:
         java-version: '8'
         distribution: 'temurin'
         cache: maven
-    - name: Build with Maven
+      name: Build with Maven
       run: mvn -B package --file pom.xml

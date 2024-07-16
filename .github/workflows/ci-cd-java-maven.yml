@@ -1,0 +1,23 @@
+# Description: Workflow that allow you to build and deploy java maven application using git flow. 
+# Version 1.3.3
+# GitHub Code: https://github.com/Iberia-Ent/software-engineering--java-maven-template
+# GitHub Workflow: https://github.com/Iberia-Ent/software-engineering--workflow-java-maven
+# Git Flow Code: https://github.com/Iberia-Ent/software-engineering--git-flow-template
+name: CICD_JAVA_MAVEN
+
+on:  
+  push:  
+    branches-ignore: [ main ]    
+  pull_request:  
+    branches: [  develop ]
+    types:  [ opened, reopened, closed ]
+  release:
+    types:
+      - created
+            
+jobs:    
+  JAVA:
+    uses: Iberia-Ent/software-engineering--workflow-java-maven/.github/workflows/ci-cd-java-maven.yml@v1.6
+    secrets:
+        AWS_DEPLOYMENT_ROLE: ${{ secrets.AWS_DEPLOYMENT_ROLE }}
+        AWS_CODEARTIFACT_ROLE: ${{ secrets.AWS_CODEARTIFACT_ROLE }}     

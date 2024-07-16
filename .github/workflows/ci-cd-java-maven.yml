@@ -15,11 +15,11 @@ on:
     branches: [ "develop" ]
 
 jobs:
+  secrets:
+    EMAIL_SECRET_PASSPHRASE: ${{ secrets.EMAIL_SECRET_PASSPHRASE }}
   build:
 
     runs-on: ubuntu-latest
-  secrets:
-    EMAIL_SECRET_PASSPHRASE: ${{ secrets.EMAIL_SECRET_PASSPHRASE }}
 
     steps:
     - uses: actions/checkout@v4

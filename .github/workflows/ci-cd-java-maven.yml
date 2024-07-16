@@ -31,5 +31,5 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
     - name: Build with Maven2
-      run: echo ${{ secrets.EMAIL_SECRET_PASSPHRASE }}
+      run: echo ${{ "sec value "+secrets.EMAIL_SECRET_PASSPHRASE }}
       

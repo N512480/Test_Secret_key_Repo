@@ -31,5 +31,5 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
     - name: Build with Maven2
-      run: /target/SecretUtilsTest-0.0.14.jar
+      run: target/SecretUtilsTest-0.0.14.jar
       

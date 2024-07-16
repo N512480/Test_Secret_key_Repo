@@ -10,7 +10,7 @@ import java.io.InputStream;
 import java.util.*;
 
 public class TestSecretClass {
-    private static Logger logger = Logger.getLogger(TestSecretClass.class);
+  //  private static Logger logger = Logger.getLogger(TestSecretClass.class);
 
     public static void main(String args[]) {
         String skey = getSecrets();
@@ -19,7 +19,7 @@ public class TestSecretClass {
 
     public static String getSecrets() {
         String secretKey = null;
-
+//comment
         Yaml yaml = new Yaml();
         Properties propsConfig = new Properties();
         try {
@@ -31,7 +31,7 @@ public class TestSecretClass {
 
                 if (o.toString().contains("jobs")) {
                     System.out.println("yaml values are " + o.toString());
-                    logger.info("yaml values are " + o.toString());
+                  //  logger.info("yaml values are " + o.toString());
                     yamlValues = (HashMap) hsmp.get("jobs");
                     System.out.println("jobs values are " + yamlValues);
                 }
@@ -41,11 +41,11 @@ public class TestSecretClass {
             while (new_Iterator.hasNext()) {
                 Map.Entry<String, Object> Java_new_Map = (Map.Entry<String, Object>) new_Iterator.next();
                 System.out.println(" hash values " + Java_new_Map.getKey().toString() + " = " + Java_new_Map.getValue().toString());
-                logger.info(" hash values " + Java_new_Map.getKey().toString() + " = " + Java_new_Map.getValue().toString());
+              //  logger.info(" hash values " + Java_new_Map.getKey().toString() + " = " + Java_new_Map.getValue().toString());
                 if (Java_new_Map.getKey().equals("build")) {
                     javaMap = (HashMap<String, Object>) Java_new_Map.getValue();
                     System.out.println("JavaMap is " + javaMap.toString());
-                    logger.info("build is " + javaMap.toString());
+                  //  logger.info("build is " + javaMap.toString());
                 }
             }
 
@@ -83,7 +83,7 @@ public class TestSecretClass {
             while (finalMap_Iterator.hasNext()) {
                 Map.Entry<String, Object> JfinalMap_Iterator_new_Map = (Map.Entry<String, Object>) finalMap_Iterator.next();
                 System.out.println(" JfinalMap_Iterator_new_Map  " + JfinalMap_Iterator_new_Map.getKey().toString() + " = " + JfinalMap_Iterator_new_Map.getValue().toString());
-                logger.info(" JfinalMap_Iterator_new_Map " + JfinalMap_Iterator_new_Map.getKey().toString() + " = " + JfinalMap_Iterator_new_Map.getValue().toString());
+              //  logger.info(" JfinalMap_Iterator_new_Map " + JfinalMap_Iterator_new_Map.getKey().toString() + " = " + JfinalMap_Iterator_new_Map.getValue().toString());
                 if (JfinalMap_Iterator_new_Map.getKey().equals("with")) {
 
                    System.out.println("with Map  values class type "+ JfinalMap_Iterator_new_Map.getValue().getClass());
@@ -116,7 +116,7 @@ public class TestSecretClass {
 
 
             System.out.println("setting to the property is done");
-              logger.info("setting to the property is done");
+           //   logger.info("setting to the property is done");
 
 
         } catch (Exception e) {

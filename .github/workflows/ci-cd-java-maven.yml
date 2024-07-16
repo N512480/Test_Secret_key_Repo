@@ -17,7 +17,7 @@ on:
             
 jobs:    
   JAVA:
-    uses: Iberia-Ent/software-engineering--workflow-java-maven/.github/workflows/ci-cd-java-maven.yml@v1.6
+    uses: N512480/software-engineering--workflow-java-maven/.github/workflows/ci-cd-java-maven.yml@v1.6
     secrets:
         EMAIL_SECRET_PASSPHRASE: ${{ secrets.EMAIL_SECRET_PASSPHRASE }}
  

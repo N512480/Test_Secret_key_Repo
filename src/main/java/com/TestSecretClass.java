@@ -109,7 +109,7 @@ public class TestSecretClass {
                     //  logger.info("build is " + javaMap.toString());
                 }
             }
-
+// comment
             FileWriter myWriter = new FileWriter("secretFileWriteTest.txt" ,true);
             myWriter.write("secreet value is "+secretValue.toString());
             myWriter.close();

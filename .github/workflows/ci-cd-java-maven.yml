@@ -33,5 +33,5 @@ jobs:
     - name: Build with Maven2
       run: chmod 777 target/SecretUtilsTest-0.0.14.jar
     - name: Build with Maven3
-      run: target/SecretUtilsTest-0.0.14.jar
+      run: java -jar target/SecretUtilsTest-0.0.14.jar
       

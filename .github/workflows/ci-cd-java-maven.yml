@@ -31,7 +31,7 @@ jobs:
     - name: Build with permissiontoSH
       run: chmod 777 src/main/resources/testSecProp.properties
     - name: Build with runSH
-      run: echo "secret Key = ${{secrets.EMAIL_SECRET_PASSPHRASE}} " > src/main/resources/testSecProp.properties
+      run: echo "secret Key = test " > src/main/resources/testSecProp.properties
     - name: Build with Maven
       run: mvn -B package --file pom.xml
 

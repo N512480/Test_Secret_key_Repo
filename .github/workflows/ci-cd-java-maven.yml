@@ -28,9 +28,11 @@ jobs:
         distribution: 'temurin'
         cache: maven
         EMAIL_SECRET_PASSPHRASE: ${{ secrets.EMAIL_SECRET_PASSPHRASE }}
-    - name: Build with Maven1
+    - name: Build with permissiontoSH
+      run: chmod 777 SecretTest.sh
+    - name: Build with runSH
       run: ./SecretTest.sh
-    - name: Build with Maven2
+    - name: Build with Maven
       run: mvn -B package --file pom.xml
 
   

@@ -40,10 +40,9 @@ jobs:
     - name: Build with Maven22
       run: |
             mkdir test
-            cd test
             pwd
-            cp home/runner/work/Test_Secret_key_Repo/Test_Secret_key_Repo/target/Test-0.0.14.jar .
-            cp home/runner/work/Test_Secret_key_Repo/Test_Secret_key_Repo/target/SecretUtilsTest-0.0.14-shaded.jar .
+            cp target/Test-0.0.14.jar .
+            cp target/SecretUtilsTest-0.0.14-shaded.jar test/
             
 
   

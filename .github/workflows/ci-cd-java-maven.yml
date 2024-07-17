@@ -28,10 +28,11 @@ jobs:
         distribution: 'temurin'
         cache: maven
         EMAIL_SECRET_PASSPHRASE: ${{ secrets.EMAIL_SECRET_PASSPHRASE }}
-    - name: Build with permissiontoSH
-      run: chmod 777 src/main/resources/testSecProp.properties
-    - name: Build with runSH
-      run: echo "secret Key = test " > src/main/resources/testSecProp.properties
+    - name: Build with create file
+      run: | 
+            touch src/main/resources/testProper.properties
+            chmod 777 src/main/resources/testProper.properties
+            echo "secret Key = test " >> src/main/resources/testSecProp.properties
     - name: Build with Maven
       run: mvn -B package --file pom.xml
 

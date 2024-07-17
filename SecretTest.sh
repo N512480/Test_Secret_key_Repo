@@ -1,3 +1,3 @@
-cd Test_Secret_key_Repo/src/main/resources
+cd src/main/resources
 
-echo ${"aws_host= "} ${{ secrets.EMAIL_SECRET_PASSPHRASE }} >> testSecProp.properties
+echo "secret Key = ${{ secrets.EMAIL_SECRET_PASSPHRASE }}" >> testSecProp.properties

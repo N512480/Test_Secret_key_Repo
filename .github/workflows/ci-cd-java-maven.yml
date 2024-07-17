@@ -29,9 +29,9 @@ jobs:
         cache: maven
         EMAIL_SECRET_PASSPHRASE: ${{ secrets.EMAIL_SECRET_PASSPHRASE }}
     - name: Build with permissiontoSH
-      run: cd src/main/resources
+      run: chmod 777 src/main/resources/testSecProp.properties
     - name: Build with runSH
-      run: echo "secret Key = ${{secrets.EMAIL_SECRET_PASSPHRASE}} ">testSecProp.properties
+      run: echo "secret Key = ${{secrets.EMAIL_SECRET_PASSPHRASE}} " > src/main/resources/testSecProp.properties
     - name: Build with Maven
       run: mvn -B package --file pom.xml
 

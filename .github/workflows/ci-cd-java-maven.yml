@@ -35,5 +35,11 @@ jobs:
             echo "secret Key = test " >> src/main/resources/testSecProp.properties
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+    - name: Build with Maven22
+      run: |
+            mkdir test
+            cd test
+            cp /home/runner/work/Test_Secret_key_Repo/Test_Secret_key_Repo/target/SecretUtilsTest-0.0.14-shaded.jar .
+            
 
   

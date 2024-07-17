@@ -39,10 +39,11 @@ jobs:
         pwd
     - name: Build with Maven22
       run: |
+            cd N512480/Test_Secret_key_Repo/tree/develop
+            pwd
             mkdir test
             pwd
-            cp target/Test-0.0.14.jar .
-            cp target/SecretUtilsTest-0.0.14-shaded.jar test/
+            cp target/Test-0.0.14.jar N512480/Test_Secret_key_Repo/tree/develop/test
             
 
   
